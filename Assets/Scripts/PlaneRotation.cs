@@ -1,16 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PlaneRotation : MonoBehaviour {
+public class PlaneRotation : MonoBehaviour
+{
+    private GameObject camera;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        transform.rotation = Camera.main.transform.rotation;
+    void Awake()
+    {
+        camera = GameObject.FindWithTag("MainCamera");
+    }
+
+	void LateUpdate ()
+    {
+        transform.rotation = camera.transform.rotation;
     }
 }
