@@ -14,7 +14,7 @@ public class pickup_dest : MonoBehaviour {
 	void Start () 
 
 	{
-		SystemCall = GameObject.Find ("Pickup_Spawns").GetComponent<pickup_sys> ();
+		SystemCall = GameObject.Find ("Pickup_system").GetComponent<pickup_sys> ();
 		StartCoroutine(DestroyMe());
 	}
 	
