@@ -5,7 +5,7 @@ using UnityEngine;
 public class pickup_dest : MonoBehaviour {
 
 	public float destroyTime = 3.0f;
-	private float rotateSpeed = 800f;
+	private float rotateSpeed = 0f;
 
 	private pickup_sys SystemCall;
 	public Transform mySpawnPoint;
@@ -14,7 +14,7 @@ public class pickup_dest : MonoBehaviour {
 	void Start () 
 
 	{
-		SystemCall = GameObject.Find ("Pickup_Spawns").GetComponent<pickup_sys> ();
+		SystemCall = GameObject.Find ("Pickup_system").GetComponent<pickup_sys> ();
 		StartCoroutine(DestroyMe());
 	}
 	
@@ -43,7 +43,7 @@ public class pickup_dest : MonoBehaviour {
 		Destroy (gameObject);
 	}
 
-	//Player pickup destruction and score
+	//Player pickup detection, destruction and score
 
 	void OnTriggerEnter(Collider col)
 	{
@@ -56,6 +56,8 @@ public class pickup_dest : MonoBehaviour {
 
 		
 	}
+
+	//Once triggered, go through the same code as DestroyMe() function
 
     void PlayerDestroy()
 	{
