@@ -34,7 +34,7 @@ public class pickup_sys : MonoBehaviour {
 			int spawnObject = Random.Range (0, pickups.Length);
 
 			GameObject NewPickup = Instantiate (pickups [spawnObject], possibleSpawns [spawnIndex].position, possibleSpawns [spawnIndex].rotation) as GameObject;
-			NewPickup.GetComponent<pickup_dest> ().mySpawnPoint = possibleSpawns[spawnIndex];
+			NewPickup.GetComponent<pickup_dest> ().MySpawnPoint = possibleSpawns[spawnIndex];
 
 			possibleSpawns.RemoveAt (spawnIndex);
 		}

@@ -1,27 +1,47 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEditor;
 
 public class Escape : MonoBehaviour {
 
 	public GameObject ShroomPointLoot;
-	public float verspe;
+    private AudioSource audioSource;
+    private AudioClip scream;
 
+	public float Speed;
+    private bool isPlayed = false;
+    public static bool IsRunning = false;
 
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        scream = AudioManager.AudioFX[2];
+        audioSource.clip = scream;
 
-	void Update()
+        if (Speed == 0)
+        {
+            Speed = 3;
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player" && !isPlayed)
+        {
+            audioSource.Play();
+            isPlayed = true;
+        }
+    }
+
+	void OnTriggerStay(Collider other)
 	{
-		
-	}
-
-	void OnTriggerStay(Collider wol)
-	{
-		if (wol.gameObject.tag == "playerdet") 
+		if (other.gameObject.tag == "Player") 
 		{
-			
-
-			ShroomPointLoot.transform.Translate(transform.forward * Time.deltaTime * verspe);
-
+			ShroomPointLoot.transform.Translate(transform.forward * Time.deltaTime * Speed);
+            IsRunning = true;
 		}
+        else
+        {
+            IsRunning = false;
+        }
 	}
 }
