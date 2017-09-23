@@ -3,10 +3,12 @@
 public class PlaneRotation : MonoBehaviour
 {
     private new GameObject camera;
+    private Material material;
 
     void Awake()
     {
         camera = GameObject.FindWithTag("MainCamera");
+        material = GetComponent<Material>();
     }
 
 	void LateUpdate ()

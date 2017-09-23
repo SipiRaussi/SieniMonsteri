@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class Sienestäjä_turnaround : MonoBehaviour {
 
-    private Material material;
     public Sprite Sp;
     public Sprite Sp2;
+    private SpriteRenderer SR;
 
     // Use this for initialization
     void Start () {
-		
+
+        SR = GetComponent<SpriteRenderer>();
+
 	}
 	
 	// Update is called once per frame
         void Update()
     {
-            if (Escape.IsRunning && (material.mainTexture == Sp))
+            if (Escape.IsRunning)
             {
-                Sp = Sp2;
+              SR.sprite = Sp2;
             }
     }
 }
