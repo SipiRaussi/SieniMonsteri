@@ -17,8 +17,8 @@ public class PlayerLost : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(timer.timeHasRunOut);
-        if (timer.timeHasRunOut)
+        Debug.Log(timer.TimeHasRunOut);
+        if (timer.TimeHasRunOut)
         {
             timer.timeHasRunOut = true;
         }
