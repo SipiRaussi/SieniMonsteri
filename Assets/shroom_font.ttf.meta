@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: d84bab525f07c3747a4a8975015d1832
+timeCreated: 1506170093
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Calligraphr
+  fontNames:
+  - Calligraphr
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
