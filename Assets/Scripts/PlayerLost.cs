@@ -10,7 +10,9 @@ public class PlayerLost : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+
         body = GetComponent<Rigidbody>();
+
     }
 
     // Update is called once per frame
@@ -20,7 +22,7 @@ public class PlayerLost : MonoBehaviour
         Debug.Log(timer.TimeHasRunOut);
         if (timer.TimeHasRunOut)
         {
-            timer.timeHasRunOut = true;
+            body.constraints = RigidbodyConstraints.FreezePosition;
         }
     }
 }
