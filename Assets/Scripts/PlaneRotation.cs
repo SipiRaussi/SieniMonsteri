@@ -11,6 +11,6 @@ public class PlaneRotation : MonoBehaviour
 
 	void LateUpdate ()
     {
-        transform.rotation = camera.transform.rotation;
+		transform.rotation = camera.transform.rotation;
     }
 }

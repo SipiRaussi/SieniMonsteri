@@ -12,6 +12,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
     {
         [SerializeField] private bool m_IsWalking;
         [SerializeField] private float m_WalkSpeed;
+		public bool allowSprint;
         [SerializeField] private float m_RunSpeed;
         [SerializeField] [Range(0f, 1f)] private float m_RunstepLenghten;
         [SerializeField] private float m_JumpSpeed;
@@ -218,11 +219,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
             m_Input = new Vector2(horizontal, vertical);
 
-            // normalize input if it exceeds 1 in combined length:
-            if (m_Input.sqrMagnitude > 1)
-            {
-                m_Input.Normalize();
-            }
+			// homebrew edit, no sprinting allowed in this towm :)
+			if (!allowSprint)
+			{
+				speed = m_WalkSpeed;
+			} else
+			{
+				speed = m_IsWalking ? m_RunSpeed : m_WalkSpeed;
+			}
 
             // handle speed change to give an fov kick
             // only if the player is going to a run, is running and the fovkick is to be used
