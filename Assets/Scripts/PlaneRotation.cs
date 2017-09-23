@@ -2,7 +2,7 @@
 
 public class PlaneRotation : MonoBehaviour
 {
-    private GameObject camera;
+    private new GameObject camera;
 
     void Awake()
     {
@@ -11,6 +11,6 @@ public class PlaneRotation : MonoBehaviour
 
 	void LateUpdate ()
     {
-        transform.rotation = camera.transform.rotation;
+        transform.rotation = Quaternion.Euler(new Vector3(0, camera.transform.eulerAngles.y, 0));
     }
 }
