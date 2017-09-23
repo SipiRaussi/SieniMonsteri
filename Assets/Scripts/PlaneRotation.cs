@@ -13,14 +13,6 @@ public class PlaneRotation : MonoBehaviour
         material = GetComponent<Material>();
     }
 
-    void Update()
-    {
-        if (Escape.IsRunning && (material.mainTexture == Sp))
-        {
-            Sp = Sp2;
-        }
-    }
-
 	void LateUpdate ()
     {
         transform.rotation = Quaternion.Euler(new Vector3(0, camera.transform.eulerAngles.y, 0));
