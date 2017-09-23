@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEditor;
 
 public class Escape : MonoBehaviour {
 
@@ -8,6 +9,7 @@ public class Escape : MonoBehaviour {
 
 	public float Speed;
     private bool isPlayed = false;
+    public static bool IsRunning = false;
 
     void Start()
     {
@@ -35,6 +37,11 @@ public class Escape : MonoBehaviour {
 		if (other.gameObject.tag == "Player") 
 		{
 			ShroomPointLoot.transform.Translate(transform.forward * Time.deltaTime * Speed);
+            IsRunning = true;
 		}
+        else
+        {
+            IsRunning = false;
+        }
 	}
 }
