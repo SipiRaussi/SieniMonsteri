@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: d2b6eb0974f311b4aa2b2e0a6caf9bc5
+timeCreated: 1506159628
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Latchboy
+  fontNames:
+  - Latchboy
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

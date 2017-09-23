@@ -27,6 +27,7 @@ public class timer : MonoBehaviour {
             gameOver = ("Game over");
             Debug.Log(gameOver);
             timeHasRunOut = true;
+
         }
         else
         {
@@ -35,7 +36,7 @@ public class timer : MonoBehaviour {
         }
 	}
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collision other)
     {
         if(other.gameObject.tag == "pickup")
         {
