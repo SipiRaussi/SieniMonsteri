@@ -19,7 +19,6 @@ public class PlayAudio : MonoBehaviour
         {
             chomp = AudioManager.AudioFX[0];
             audioSource.clip = chomp;
-            Debug.Log(chomp.name);
         }
     }
 
