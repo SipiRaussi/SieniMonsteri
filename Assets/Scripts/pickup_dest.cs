@@ -11,6 +11,7 @@ public class pickup_dest : MonoBehaviour {
 	public Transform mySpawnPoint;
 
 
+
 	void Start () 
 
 	{
@@ -43,23 +44,25 @@ public class pickup_dest : MonoBehaviour {
 		Destroy (gameObject);
 	}
 
+
+
 	//Player pickup detection, destruction and score
 
 	void OnTriggerEnter(Collider col)
 	{
 		if (col.gameObject.tag == "Player") 
-			
+		
 		{
 			//Yeah, I use SendMessage, sue me :)
 			this.gameObject.SendMessage ("PlayerDestroy");
 		}
-
-		
 	}
+			
+
 
 	//Once triggered, go through the same code as DestroyMe() function
 
-    void PlayerDestroy()
+    public void PlayerDestroy()
 	{
 		
 		for (int i = 0; i < SystemCall.spawnPoints.Length; i++) 
@@ -72,7 +75,8 @@ public class pickup_dest : MonoBehaviour {
 		}
 
 		Destroy (gameObject);
-		Debug.Log ("jep");
+
+	
 	}
 
 }
