@@ -1,12 +1,11 @@
-﻿using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
     // Arrays of audio files
-    public static AudioClip[] Music = new AudioClip[2];
-    public static AudioClip[] AudioFX = new AudioClip[3];
+    public static AudioClip[] Music;
+    public static AudioClip[] AudioFX;
 
     private AudioSource audioSource;
 
@@ -28,7 +27,7 @@ public class AudioManager : MonoBehaviour
     /// <param name="sceneName"> Scene name </param>
     void PlayMusic(string sceneName)
     {
-        if (sceneName == "Menu")
+        if (sceneName == "MainMenu")
         {
             audioSource.clip = Music[0];
         }
@@ -53,25 +52,28 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     void LoadAudio()
     {
-        Music[0] = (AudioClip)AssetDatabase.LoadAssetAtPath("Assets/Music/SieniMonsteri - Menu.ogg", typeof(AudioClip));
-        Music[1] = (AudioClip)AssetDatabase.LoadAssetAtPath("Assets/Music/SieniMonsteri - The Hunt.ogg", typeof(AudioClip));
+        Object[] music = Resources.LoadAll("Audio/Music", typeof(AudioClip));
+        Music = new AudioClip[music.Length];
 
         // Check if couldn't find audio track
         for(int tune = 0; tune < Music.Length; tune++)
         {
+            Music[tune] = (AudioClip)music[tune];
+
             if(Music[tune] == null)
             {
                 Debug.Log("Couldn't find audio track for Music[" + tune + "].");
             }
         }
 
-        AudioFX[0] = (AudioClip)AssetDatabase.LoadAssetAtPath("Assets/Music/SieniMonsteri - Chomp.ogg", typeof(AudioClip));
-        AudioFX[1] = (AudioClip)AssetDatabase.LoadAssetAtPath("Assets/Music/SieniMonsteri - Reward.ogg", typeof(AudioClip));
-        AudioFX[2] = (AudioClip)AssetDatabase.LoadAssetAtPath("Assets/Music/SieniMonsteri - Scream.ogg", typeof(AudioClip));
+        Object[] audioFX = Resources.LoadAll("Audio/FX", typeof(AudioClip));
+        AudioFX = new AudioClip[audioFX.Length];
 
         // Check if couldn't find audio track
         for (int effect = 0; effect < AudioFX.Length; effect++)
         {
+            AudioFX[effect] = (AudioClip)audioFX[effect]; 
+
             if (AudioFX[effect] == null)
             {
                 Debug.Log("Couldn't find audio track for Music[" + effect + "].");

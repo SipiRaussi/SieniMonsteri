@@ -4,6 +4,8 @@ using UnityEditor;
 public class Escape : MonoBehaviour {
 
 	public GameObject ShroomPointLoot;
+
+    private Sprite sp;
     private AudioSource audioSource;
     private AudioClip scream;
 
@@ -15,6 +17,12 @@ public class Escape : MonoBehaviour {
     {
         audioSource = GetComponent<AudioSource>();
         scream = AudioManager.AudioFX[2];
+
+        sp = GetComponentInParent<SpriteRenderer>().sprite;
+        if(sp.name == "Mummo_0" || sp.name == "Mummo_1")
+        {
+            audioSource.pitch = 1.5f;
+        }
         audioSource.clip = scream;
 
         if (Speed == 0)
