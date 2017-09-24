@@ -225,9 +225,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8592b1dc24e3604db454be727d62da2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLeft: 3
+  TimeLeft: 1000
+  TimeLeftText: {fileID: 0}
+  GameOverText: {fileID: 0}
+  Score: {fileID: 0}
+  Restart: {fileID: 0}
+  Exit: {fileID: 0}
   ShroomValue: 0
   TimeIncrease: 5
+  Pickup_system: {fileID: 0}
 --- !u!114 &114296833769329336
 MonoBehaviour:
   m_ObjectHideFlags: 1
