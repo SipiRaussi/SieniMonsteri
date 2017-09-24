@@ -8,14 +8,16 @@ public class timer : MonoBehaviour
 {
 
     public float TimeLeft = 10;
-    public Text TimeLeftText;
-    public Text GameOverText;
-    public Text Score;
-    public GameObject Restart;
-    public GameObject Exit;
+    private Text TimeLeftText;
+    private Text GameOverText;
+    private Text Score;
+    private GameObject Restart;
+    private GameObject Exit;
+    private GameObject BLACK;
+    private GameObject Hands;
+
     public int ShroomValue = 0;
     public int TimeIncrease = 5;
-    public GameObject Pickup_system;
     public static bool TimeHasRunOut = false;
 
     void Start()
@@ -41,6 +43,8 @@ public class timer : MonoBehaviour
             GameOverText.text = "YOU DIEDED";
             Restart.SetActive(true);
             Exit.SetActive(true);
+            BLACK.SetActive(true);
+            Hands.SetActive(false);
             TimeHasRunOut = true;
             GetComponent<FirstPersonController>().enabled = false;
         }
@@ -68,6 +72,8 @@ public class timer : MonoBehaviour
             GameOverText.text = "YOU DIEDED";
             Restart.SetActive(true);
             Exit.SetActive(true);
+            BLACK.SetActive(true);
+            Hands.SetActive(false);
             TimeHasRunOut = true;
             GetComponent<FirstPersonController>().enabled = false;
         }
@@ -102,5 +108,18 @@ public class timer : MonoBehaviour
             Exit = GameObject.FindWithTag("Exit");
             Exit.SetActive(false);
         }
+
+        if (BLACK == null)
+        {
+            BLACK = GameObject.FindWithTag("black");
+            BLACK.SetActive(false);
+        }
+
+        if (Hands == null)
+        {
+            Hands = GameObject.FindWithTag("hands");
+            
+        }
+        
     }
 }

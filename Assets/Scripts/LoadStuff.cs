@@ -16,4 +16,9 @@ public class LoadStuff : MonoBehaviour {
 		SceneManager.LoadScene ("SieniMonsteri");
 		
 	}
+
+    public void Quic() {
+
+        Application.Quit();
+    }
 }
