@@ -20,7 +20,6 @@ public class pickup_dest : MonoBehaviour {
 		transform.Rotate (Vector3.forward * Time.deltaTime * rotateSpeed);	
 	}
 
-
 	//Timed pickup destruction
 	IEnumerator DestroyMe()
 	{
