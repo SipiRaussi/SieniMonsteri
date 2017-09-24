@@ -9,12 +9,27 @@ public class AudioManager : MonoBehaviour
 
     private AudioSource audioSource;
 
+    static bool created = false;
+
     void Awake()
     {
+        if(!created)
+        {
+            DontDestroyOnLoad(gameObject);
+            created = true;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
         LoadAudio();
 
         audioSource = GetComponent<AudioSource>();
+    }
 
+    void Start()
+    {
         Scene currenScene = SceneManager.GetActiveScene();
         string sceneName = currenScene.name;
 
