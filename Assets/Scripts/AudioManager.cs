@@ -8,8 +8,11 @@ public class AudioManager : MonoBehaviour
     public static AudioClip[] AudioFX;
 
     private AudioSource audioSource;
+    private Scene currentScene;
 
     static bool created = false;
+    bool isChanged = false;
+    private string sceneName;
 
     void Awake()
     {
@@ -30,10 +33,20 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        Scene currenScene = SceneManager.GetActiveScene();
-        string sceneName = currenScene.name;
+        currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
 
         PlayMusic(sceneName);
+    }
+
+    void LateUpdate()
+    {
+        if(currentScene.name != SceneManager.GetActiveScene().name && !isChanged)
+        {
+            string sceneName = SceneManager.GetActiveScene().name;
+            PlayMusic(sceneName);
+            isChanged = true;
+        }
     }
 
     /// <summary>

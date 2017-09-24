@@ -731,7 +731,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1.4
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1
   startDelay:
@@ -3368,7 +3368,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1.4
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1
   startDelay:
@@ -6005,7 +6005,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1.4
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1
   startDelay:
@@ -6050,7 +6050,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1783410928
+  randomSeed: -132222388
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -8642,7 +8642,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 0.7
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1
   startDelay:
@@ -11279,7 +11279,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 0.6
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1
   startDelay:
@@ -13916,7 +13916,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1.4
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1
   startDelay:
@@ -16553,7 +16553,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 0.8
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1
   startDelay:
@@ -19190,7 +19190,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1.4
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1
   startDelay:
@@ -21827,7 +21827,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1
   startDelay:
@@ -24464,7 +24464,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1.1
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1
   startDelay:
@@ -27101,7 +27101,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1.4
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1
   startDelay:
@@ -29738,7 +29738,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 0.9
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1
   startDelay:
@@ -32375,7 +32375,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1.4
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1
   startDelay:
@@ -35012,7 +35012,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1.4
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1
   startDelay:
@@ -37649,7 +37649,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1.4
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1
   startDelay:
@@ -40286,7 +40286,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1.4
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1
   startDelay:
@@ -42923,7 +42923,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1.2
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1
   startDelay:
@@ -45560,7 +45560,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 0.5
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1
   startDelay:
@@ -48197,7 +48197,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1.4
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1
   startDelay:
@@ -50834,7 +50834,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1.4
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1
   startDelay:
@@ -53471,7 +53471,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1.4
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1
   startDelay:
@@ -56108,7 +56108,7 @@ ParticleSystem:
   lengthInSec: 5
   simulationSpeed: 1.4
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1
   startDelay:

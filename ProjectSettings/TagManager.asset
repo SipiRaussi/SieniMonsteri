@@ -13,9 +13,6 @@ TagManager:
   - Restart
   - Exit
   - hirvi
-  - systempick
-  - black
-  - hands
   layers:
   - Default
   - TransparentFX
