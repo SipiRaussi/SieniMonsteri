@@ -23,11 +23,13 @@ public class timer : MonoBehaviour
     void Start()
     {
         GetComponents();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
 
 
         TimeLeft -= Time.deltaTime;
@@ -47,13 +49,18 @@ public class timer : MonoBehaviour
             Hands.SetActive(false);
             TimeHasRunOut = true;
             GetComponent<FirstPersonController>().enabled = false;
+
+
+            
+
         }
         else
         {
             TimeLeftText.text = "Time Left: " + Mathf.Round(TimeLeft);
             // Debug.Log(text);
         }
-    }
+    
+}
 
 
     void OnTriggerEnter(Collider got)
