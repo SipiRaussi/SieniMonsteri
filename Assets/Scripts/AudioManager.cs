@@ -11,7 +11,6 @@ public class AudioManager : MonoBehaviour
     private Scene currentScene;
 
     static bool created = false;
-    bool isChanged = false;
     private string sceneName;
 
     void Awake()
@@ -46,7 +45,6 @@ public class AudioManager : MonoBehaviour
             currentScene = SceneManager.GetActiveScene();
             sceneName = currentScene.name;
             PlayMusic(sceneName);
-            isChanged = true;
         }
     }
 

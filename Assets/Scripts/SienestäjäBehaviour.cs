@@ -48,7 +48,7 @@ public class SienestäjäBehaviour : MonoBehaviour {
         {
             sR.sprite = sP[1];
         }
-        else
+        else if (!Escape.IsRunning)
         {
             sR.sprite = sP[0];
         }
