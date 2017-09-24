@@ -13,6 +13,8 @@ TagManager:
   - Restart
   - Exit
   - hirvi
+  - black
+  - hands
   layers:
   - Default
   - TransparentFX

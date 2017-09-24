@@ -3,13 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadStuff : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
+public class LoadStuff : MonoBehaviour
+{
 	// Update is called once per frame
 	public void Restart () {
 
@@ -17,7 +12,17 @@ public class LoadStuff : MonoBehaviour {
 		
 	}
 
-    public void Quic() {
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void Quit() {
 
         Application.Quit();
     }

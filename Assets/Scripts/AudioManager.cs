@@ -41,9 +41,10 @@ public class AudioManager : MonoBehaviour
 
     void LateUpdate()
     {
-        if(currentScene.name != SceneManager.GetActiveScene().name && !isChanged)
+        if(currentScene.name != SceneManager.GetActiveScene().name)
         {
-            string sceneName = SceneManager.GetActiveScene().name;
+            currentScene = SceneManager.GetActiveScene();
+            sceneName = currentScene.name;
             PlayMusic(sceneName);
             isChanged = true;
         }
@@ -55,7 +56,7 @@ public class AudioManager : MonoBehaviour
     /// <param name="sceneName"> Scene name </param>
     void PlayMusic(string sceneName)
     {
-        if (sceneName == "MainMenu")
+        if (sceneName == "MainMenu" || sceneName == "Credits")
         {
             audioSource.clip = Music[0];
         }
