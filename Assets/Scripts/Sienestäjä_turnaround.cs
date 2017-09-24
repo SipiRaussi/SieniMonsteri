@@ -18,9 +18,14 @@ public class Sienestäjä_turnaround : MonoBehaviour {
 	// Update is called once per frame
         void Update()
     {
+        
             if (Escape.IsRunning)
             {
               SR.sprite = Sp2;
             }
+            else
+           {
+            SR.sprite = Sp;
+           }
     }
 }
