@@ -39,9 +39,15 @@ public class Escape : MonoBehaviour {
 			ShroomPointLoot.transform.Translate(transform.forward * Time.deltaTime * Speed);
             IsRunning = true;
 		}
-        else
+       
+	}
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
         {
             IsRunning = false;
         }
-	}
+
+   }
 }

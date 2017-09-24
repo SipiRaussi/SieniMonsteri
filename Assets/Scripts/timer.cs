@@ -59,6 +59,18 @@ public class timer : MonoBehaviour
             TimeLeft += TimeIncrease;
             ShroomValue = ShroomValue + 1;
         }
+        else if (got.gameObject.tag == "hirvi")
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+
+            GameOverText.text = "YOU DIEDED";
+            Restart.SetActive(true);
+            Exit.SetActive(true);
+            TimeHasRunOut = true;
+            GetComponent<FirstPersonController>().enabled = false;
+        }
     }
 
     // Get all components
