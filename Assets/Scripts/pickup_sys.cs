@@ -12,23 +12,19 @@ public class pickup_sys : MonoBehaviour {
 
 
 	void Start ()
-
 	{
-		for(int i = 0;i < spawnPoints.Length; i++)
-			
+		for(int i = 0;i < spawnPoints.Length; i++)		
 		{
 			possibleSpawns.Add (spawnPoints [i]);
 		}
 
 		InvokeRepeating ("SpawnItems", spawnTime, spawnTime);
-
 	}
 
 
 	void SpawnItems()
 	{
-		if(possibleSpawns.Count > 0)
-			
+		if(possibleSpawns.Count > 0)			
 		{
 			int spawnIndex = Random.Range (0, possibleSpawns.Count);
 			int spawnObject = Random.Range (0, pickups.Length);

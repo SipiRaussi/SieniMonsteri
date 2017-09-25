@@ -55,7 +55,5 @@ public class pickup_dest : MonoBehaviour {
 			}
 		}
 		Destroy (gameObject);
-		//Debug.Log ("jep");
 	}
-
 }

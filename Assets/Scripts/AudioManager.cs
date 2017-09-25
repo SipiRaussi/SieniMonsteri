@@ -75,7 +75,7 @@ public class AudioManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Handles of loading all audio files
+    /// Handles loading all audio files
     /// </summary>
     void LoadAudio()
     {
@@ -107,4 +107,10 @@ public class AudioManager : MonoBehaviour
             }
         }
     }
+
+    void CheckScene()
+    {
+        
+    }
+
 }
